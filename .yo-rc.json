@@ -1,0 +1,24 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "BGRecrutamento",
+    "namespaceUI5": "com.ianbadan",
+    "enableFPM": false,
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "ui5libs": "Content delivery network (OpenUI5)",
+    "newdir": true,
+    "codeassist": true,
+    "initrepo": true,
+    "namespaceURI": "com/ianbadan",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
