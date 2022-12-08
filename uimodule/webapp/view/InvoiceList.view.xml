@@ -15,7 +15,7 @@
         <ImageContent
         id="logo"
         class="sapUiLargeMarginTop sapUiLargeMarginBottom sapUiLargeMarginBegin"
-        src="../images/Logo_banner_principal.png"
+        src="../webapp/images/Logo_banner_principal.png"
         description="Logo"
         tooltip="Nós Somos a BR GAAP">
         </ImageContent>
