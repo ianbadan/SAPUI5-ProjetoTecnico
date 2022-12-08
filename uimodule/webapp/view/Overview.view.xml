@@ -1,7 +1,8 @@
 <mvc:View controllerName="com.ianbadan.BGRecrutamento.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-    <Shell
-    appWidthLimited="false">
-        <App id="app" class="myAppDemoWT">
-        </App>
-    </Shell>
+    <Page id="page" title="{i18n>title}">
+        <content>
+           <mvc:XMLView viewName="com.ianbadan.BGRecrutamento.view.InvoiceList"/>
+        </content>
+    </Page>
+
 </mvc:View>

@@ -1,0 +1,79 @@
+<mvc:View
+	controllerName="com.ianbadan.BGRecrutamento.controller.InvoiceList"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+    <Panel
+    id="panel"
+    class="sapUiResponsiveMargin"
+    width="auto">
+    <content>
+        <ImageContent
+        id="logo"
+        class="sapUiLargeMarginTop sapUiLargeMarginBottom sapUiLargeMarginBegin"
+        src="../images/Logo_banner_principal.png"
+        description="Logo"
+        tooltip="Nós Somos a BR GAAP">
+        </ImageContent>
+        <SearchField liveChange=".onSearch" width="100%" />
+
+        <Table
+            id="idTable"
+            items="{/}">
+            <columns>
+                <Column
+                    minScreenWidth="Tablet">
+                    <Text text="Nome"/>
+                </Column>
+                <Column
+                    width="12em"
+                    minScreenWidth="Tablet"
+                    demandPopin="true">
+                    <Text text="Completado" />
+                </Column>
+                <Column
+                    width="12em"
+                    minScreenWidth="Tablet"
+                    demandPopin="true">
+                    <Text text="Detalhes" />
+                </Column>
+            </columns>
+
+            <items>
+            <ColumnListItem>
+                <cells>
+                    <ObjectIdentifier
+                        title="{title}"
+                        class="sapUiTinyMarginTopBottom" />
+                    <CheckBox
+                        activeHandling="true"
+                        displayOnly="false"
+                        editable="true"
+                        enabled="true"
+                        selected="{completed}"
+                        valueState="None"
+                        wrapping="false"
+                        select="onCompletadoSelect"
+                    />
+                    <Button
+                        enabled="true"
+                        icon="sap-icon://activity-items"
+                        iconDensityAware="true"
+                        iconFirst="true"
+                        textDirection="Inherit"
+                        type="Default"
+                        width="100%"
+                        tooltip="Veja mais detalhes"
+                        press="onButtonDetalhes"
+                    />
+                </cells>
+            </ColumnListItem>
+            </items>
+        </Table>
+    </content>
+    </Panel>
+</mvc:View>

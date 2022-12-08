@@ -1,0 +1,42 @@
+<mvc:View
+	controllerName="com.ianbadan.BGRecrutamento.controller.Details"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0" 
+>
+    <Page
+        title="Detalhes Da Nota Fiscal"
+        showNavButton="true"
+        navButtonPress=".onNavBack">   
+        <Panel
+            accessibleRole="Form"
+            backgroundDesign="Translucent"
+            expandAnimation="true"
+            expandable="false"
+            expanded="false"
+            height="auto"
+            width="auto"
+            class="sapUiResponsiveMargin"
+        >
+            <content>
+                <ObjectHeader 
+                    title="Nota Fiscal"/>
+                <ObjectAttribute
+                    text="ID da Nota Fiscal:  {id}"
+                    class="sapUiTinyMarginBottom"/>
+                <ObjectAttribute
+                    text="ID do Usuario:  {userId}"
+                    class="sapUiTinyMarginBottom"/>
+                <ObjectAttribute
+                    text="Titulo:  {title}"
+                    class="sapUiTinyMarginBottom"/>
+                <ObjectAttribute
+                    text="Está Completado? {=${completed} ? 'Sim' : 'Não'}"
+                    class="sapUiTinyMarginBottom"/>
+            </content>
+        </Panel>
+    </Page>
+</mvc:View>

@@ -63,6 +63,7 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
+        "type": "View",
         "async": true,
         "viewPath": "com.ianbadan.BGRecrutamento.view",
         "controlAggregation": "pages",
@@ -71,20 +72,27 @@
       },
       "routes": [
         {
-          "name": "RouteMainView",
-          "pattern": ":?query:",
-          "target": [
-            "TargetMainView"
-          ]
+          "name": "Overview",
+          "pattern": "",
+          "target": "Overview"
+        },
+        {
+          "name": "Details",
+          "pattern": "Details/{invoicePath}",
+          "target": "Details"
         }
       ],
       "targets": {
-        "TargetMainView": {
+        "Overview": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "MainView",
-          "viewName": "MainView"
+          "viewId": "Overview",
+          "viewName": "Overview"
+        },
+        "Details": {
+          "viewId": "Details",
+          "viewName": "Details"
         }
       }
     },
@@ -93,6 +101,13 @@
       "type": "XML",
       "async": true,
       "id": "App"
-    }
+    },
+		"dependencies": {
+			"libs": {
+				"sap.ui.core": {},
+				"sap.ui.layout": {},
+				"sap.m": {}
+			}
+		}
   }
 }
